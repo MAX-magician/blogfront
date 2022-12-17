@@ -1,0 +1,33 @@
+footer {
+  height: 130px;
+  background-color: #202020aa;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+footer > div {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+}
+footer > div > div:nth-child(1){
+    margin: 5px 0;
+}
+footer > div > a {
+  display: inline-block;
+  text-decoration: none;
+  height: 20px;
+  line-height: 20px;
+}
+footer > div > a img {
+  float: left;
+  width: 20px;
+}
+
+footer > div > a p {
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  margin: 0px 0px 0px 5px;
+}
