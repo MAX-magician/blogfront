@@ -2,7 +2,7 @@ import React from "react";
 import "../style/header.css";
 import axios from "axios";
 import config from "../var";
-import { Link, Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   state = {
@@ -21,7 +21,7 @@ class Header extends React.Component {
   };
   nologin = () => {
     return (
-      <Link className="noLoginButton" to="/page/Login">
+      <Link className="noLoginButton" to="/Login">
         登录/注册
       </Link>
     );

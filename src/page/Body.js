@@ -1,6 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link, Route,Routes } from "react-router-dom";
 import "../style/body.css";
-class Body extends React.Component {
+import Login from "./Login";
+import Index from "./index";
+class Body extends Component {
   state = {
     BackTop: {
       display: "none",
@@ -55,7 +58,12 @@ class Body extends React.Component {
         >
           ↑
         </div>
-        Body
+        <div>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </div>
       </div>
     );
   }

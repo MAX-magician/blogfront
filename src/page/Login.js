@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from 'react'
 import axios from "axios";
 import config from "../var";
 axios.defaults.withCredentials = true; // 跨域
 
-class Login extends React.Component {
+class Login extends Component {
   state = {
     LoginValue: "",
     PassWordValue: "",
