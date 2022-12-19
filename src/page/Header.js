@@ -39,7 +39,6 @@ class Header extends React.Component {
           })}
         </ul>
         <div className="UserInfoLogin">{this.nologin()}</div>
-        {/* <Route path="/page/Login" /> */}
       </header>
     );
   }

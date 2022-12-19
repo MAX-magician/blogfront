@@ -1,8 +1,6 @@
 .body {
   position: relative;
   margin-top: 50px;
-  height: 2000px;
-  padding: 0 200px;
 }
 .backTopButton {
   position: fixed;

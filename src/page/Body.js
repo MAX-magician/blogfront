@@ -3,6 +3,8 @@ import { Link, Route,Routes } from "react-router-dom";
 import "../style/body.css";
 import Login from "./Login";
 import Index from "./index";
+import Register from "./Register";
+
 class Body extends Component {
   state = {
     BackTop: {
@@ -62,6 +64,7 @@ class Body extends Component {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </div>
       </div>

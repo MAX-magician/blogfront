@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import axios from "axios";
 import config from "../var";
+import { Link } from "react-router-dom";
+import "../style/login.css";
 axios.defaults.withCredentials = true; // 跨域
 
 class Login extends Component {
@@ -34,63 +36,38 @@ class Login extends Component {
         console.error(err);
       });
   };
-  checkLogin = (e) => {
-    axios
-      .get(config.server + "/users/getUserInfo", {})
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
-  essayUpdate = (e) => {
-    this.setState({
-      textareaEssay: e.target.value,
-    });
-  }
-  essayClick = (e) => {
-    e.preventDefault();
-    axios
-      .post(config.server + "/essay/update", {
-        // 参数名: 参数值
-        content: this.state.textareaEssay
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
   render() {
     return (
-      <>
-        <form method="post" action="localhost:3000/users/login">
-          账号{" "}
-          <input
-            type="text"
-            id="username"
-            onChange={(e) => this.usernameChange(e)}
-          />
-          <br />
-          密码{" "}
-          <input
-            type="password"
-            id="password"
-            onChange={(e) => this.passwordChange(e)}
-          />
-          <br />
-          <button type="submit" id="submit" onClick={this.loginSubmit}>
-            登录
-          </button>
-          <button type="button" id="checkLogin" onClick={this.checkLogin}>
-            检查登录状态
-          </button>
-        </form>
-        内容： <textarea onChange={this.essayUpdate}></textarea>
-        <button type="button" onClick={this.essayClick}>发布</button>
-      </>
+      <div className="loginFormMain">
+        <div className="loginForm">
+          <div>
+            <div></div>
+            <h2>用户登录</h2>
+            <div>
+              <span>账号:</span>
+              <input
+                type="text"
+                id="username"
+                onChange={(e) => this.usernameChange(e)}
+              />
+            </div>
+            <div>
+              <span>密码:</span>
+              <input
+                type="password"
+                id="password"
+                onChange={(e) => this.passwordChange(e)}
+              />
+            </div>
+            <div>
+              <div id="submit" onClick={this.loginSubmit}>
+                登录
+              </div>
+              <Link id="loginRegit" to="/register">注册</Link>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
