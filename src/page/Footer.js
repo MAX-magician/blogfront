@@ -8,13 +8,14 @@ class Footer extends React.Component {
           <div>Copyright © 2022-2023 魔术师的代码日志</div>
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=37091102000563"
           >
-            <img src="https://magic001.top/glogo.png" />
+            <img src="https://magic001.top/glogo.png" alt="" />
             <p>鲁公网安备 37091102000563号</p>
           </a>
           <div>
-            <a href="http://beian.miit.gov.cn/" target="_blank">
+            <a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
               鲁ICP备 2022035075号-1
             </a>
           </div>
