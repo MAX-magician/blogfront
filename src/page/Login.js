@@ -44,7 +44,7 @@ class Login extends Component {
             <div></div>
             <h2>用户登录</h2>
             <div>
-              <span>账号:</span>
+              <span>账号</span>
               <input
                 type="text"
                 id="username"
@@ -52,7 +52,7 @@ class Login extends Component {
               />
             </div>
             <div>
-              <span>密码:</span>
+              <span>密码</span>
               <input
                 type="password"
                 id="password"
@@ -63,7 +63,9 @@ class Login extends Component {
               <div id="submit" onClick={this.loginSubmit}>
                 登录
               </div>
-              <Link id="loginRegit" to="/register">注册</Link>
+              <Link id="loginRegit" to="/register">
+                立即注册
+              </Link>
             </div>
           </div>
         </div>
