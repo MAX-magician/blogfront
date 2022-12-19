@@ -58,6 +58,7 @@
 .loginForm > div > div > span{
     width: 60px;
     height: 100%;
+    user-select: none;
     background-color: rgb(255, 251, 0);
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
