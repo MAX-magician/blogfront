@@ -29,16 +29,20 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <ul className="headerUlMenu">
-          {this.state.menuLi.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className="headerLiA" href={this.state.menuLiUrl[index]}>{item}</a>
-              </li>
-            );
-          })}
-        </ul>
-        <div className="UserInfoLogin">{this.nologin()}</div>
+        <div>
+          <ul className="headerUlMenu">
+            {this.state.menuLi.map((item, index) => {
+              return (
+                <li key={index}>
+                  <a className="headerLiA" href={this.state.menuLiUrl[index]}>
+                    {item}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+          <div className="UserInfoLogin">{this.nologin()}</div>
+        </div>
       </header>
     );
   }
